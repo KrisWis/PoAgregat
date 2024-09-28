@@ -191,6 +191,17 @@ nav {
   display: flex;
   align-items: center;
   gap: 5px;
+  transition: 0.3s linear all;
+  cursor: pointer;
+}
+.header__wrapper__second__contacts__item svg * {
+  transition: 0.3s linear all;
+}
+.header__wrapper__second__contacts__item:hover {
+  color: #3e78de;
+}
+.header__wrapper__second__contacts__item:hover svg * {
+  fill: #3e78de;
 }
 .header__catalog {
   padding: 15px 20px;
@@ -415,6 +426,13 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   color: #3b3d40;
+  border: transparent 3px solid;
+  transition: 0.3s linear all;
+}
+.header__account:hover {
+  background: transparent;
+  border-color: #3b3d40;
+  color: #3b3d40;
 }
 @media (max-width: 900px) {
   .header__account {
@@ -492,6 +510,13 @@ nav {
   cursor: pointer;
   color: #3b3d40;
   position: relative;
+  border: transparent 3px solid;
+  transition: 0.3s linear all;
+}
+.header__sklad:hover {
+  background: transparent;
+  border-color: #3b3d40;
+  color: #3b3d40;
 }
 @media (max-width: 900px) {
   .header__sklad {
@@ -535,6 +560,25 @@ nav {
 .header__korzina {
   cursor: pointer;
   margin-left: 30px;
+}
+.header__korzina__dropdown {
+  transform: translateY(50%);
+  opacity: 0;
+  transition: 0.3s linear all;
+  position: absolute;
+  z-index: 2;
+  padding: 2rem;
+  width: 20rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+.header__korzina__dropdown__text {
+  font-size: 1rem;
+  color: #3b3d40;
+}
+.header__korzina__dropdown__active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* /Header/ */

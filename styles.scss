@@ -187,6 +187,19 @@ nav {
           display: flex;
           align-items: center;
           gap: 5px;
+          transition: 0.3s linear all;
+          cursor: pointer;
+
+          svg * {
+            transition: 0.3s linear all;
+          }
+
+          &:hover {
+            color: #3e78de;
+            svg * {
+              fill: #3e78de;
+            }
+          }
         }
       }
     }
@@ -431,6 +444,14 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     color: #3b3d40;
+    border: transparent 3px solid;
+    transition: 0.3s linear all;
+
+    &:hover {
+      background: transparent;
+      border-color: #3b3d40;
+      color: #3b3d40;
+    }
 
     @media (max-width: 900px) {
       display: none;
@@ -505,6 +526,14 @@ nav {
     cursor: pointer;
     color: #3b3d40;
     position: relative;
+    border: transparent 3px solid;
+    transition: 0.3s linear all;
+
+    &:hover {
+      background: transparent;
+      border-color: #3b3d40;
+      color: #3b3d40;
+    }
 
     @media (max-width: 900px) {
       width: 120px;
@@ -551,6 +580,28 @@ nav {
   &__korzina {
     cursor: pointer;
     margin-left: 30px;
+
+    &__dropdown {
+      transform: translateY(50%);
+      opacity: 0;
+      transition: 0.3s linear all;
+      position: absolute;
+      z-index: 2;
+      padding: 2rem;
+      width: 20rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      background: #fff;
+
+      &__text {
+        font-size: 1rem;
+        color: #3b3d40;
+      }
+
+      &__active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 }
 
