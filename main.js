@@ -6,12 +6,8 @@ const header__catalog__menu__button = document.getElementById(
 
 const mobile_mediaQuery = window.matchMedia("(max-width: 900px)");
 
-const header__catalog__button = document.getElementById(
-  "header__catalog__button"
-);
-
-const header__catalog__cross = document.getElementById(
-  "header__catalog__cross"
+const header__catalog__button__adaptive = document.getElementById(
+  "header__catalog__button__adaptive"
 );
 
 header__catalog__menu__button.addEventListener("click", (e) => {
@@ -30,14 +26,10 @@ header__catalog__menu__button.addEventListener("click", (e) => {
     }
 
     if (mobile_mediaQuery.matches) {
-      if (
-        header__catalog__cross.classList.contains("header__catalog__disactive")
-      ) {
-        header__catalog__button.classList.add("header__catalog__disactive");
-        header__catalog__cross.classList.remove("header__catalog__disactive");
+      if (header__catalog__button__adaptive.classList.contains("open")) {
+        header__catalog__button__adaptive.classList.remove("open");
       } else {
-        header__catalog__cross.classList.add("header__catalog__disactive");
-        header__catalog__button.classList.remove("header__catalog__disactive");
+        header__catalog__button__adaptive.classList.add("open");
       }
     }
   }
@@ -106,6 +98,21 @@ for (let header__catalog__menu__item__withSubMenu of header__catalog__menu__item
             "header__catalog__menu__item__active"
           );
         }
+      }
+    );
+
+    header__catalog__menu__item__withSubMenu.addEventListener(
+      "mouseleave",
+      (e) => {
+        submenu.classList.remove(
+          "header__catalog__menu__item__submenu__active"
+        );
+
+        header__catalog__menu__item__withSubMenu.classList.remove(
+          "header__catalog__menu__item__active"
+        );
+
+        header__catalog__menu__item__active = null;
       }
     );
   }
