@@ -36,11 +36,13 @@
           <div>
             <button class="header__catalog" id="header__catalog__menu__button">
               <svg
+                class="header__catalog__button"
                 width="15px"
                 height="15px"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 style="min-height: 15px; min-width: 15px"
+                id="header__catalog__button"
               >
                 <path
                   d="M4 18L20 18"
@@ -59,6 +61,24 @@
                   stroke="#fff"
                   stroke-width="2"
                   stroke-linecap="round"
+                />
+              </svg>
+
+              <svg
+                class="header__catalog__cross header__catalog__disactive"
+                id="header__catalog__cross"
+                width="30px"
+                height="50px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 5L5 19M5.00001 5L19 19"
+                  stroke="#000000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
 
@@ -677,8 +697,276 @@
             </ul>
           </div>
         </div>
+
+        <div class="header__wrapper__second">
+          <div class="header__wrapper__second__wrapper">
+            <a class="header__account" href="#">
+              <svg
+                width="15px"
+                height="15px"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z"
+                  fill="#000000"
+                />
+              </svg>
+
+              <span>Аккаунт</span>
+            </a>
+
+            <form
+              class="header__search"
+              method="post"
+              action="https://poagregat.ru"
+            >
+              <input
+                name="s"
+                class="header__search__input"
+                placeholder="Поиск"
+                type="text"
+              />
+
+              <button class="header__search__svg" type="submit">
+                <svg
+                  width="18px"
+                  height="18px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_15_152)">
+                    <rect width="24" height="24" fill="white" />
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="6.5"
+                      stroke="#000000"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z"
+                      fill="#000000"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_152">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </form>
+
+            <a class="header__sklad" href="#">
+              <svg
+                width="15px"
+                height="15px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M3.99085 14.6599L2.47086 13.1399C1.85086 12.5199 1.85086 11.4999 2.47086 10.8799L3.99085 9.3599C4.25085 9.0999 4.46085 8.58989 4.46085 8.22989V6.07993C4.46085 5.19993 5.18086 4.47989 6.06086 4.47989H8.21085C8.57085 4.47989 9.08085 4.26992 9.34085 4.00992L10.8608 2.4899C11.4808 1.8699 12.5009 1.8699 13.1209 2.4899L14.6409 4.00992C14.9009 4.26992 15.4108 4.47989 15.7708 4.47989H17.9209C18.8009 4.47989 19.5208 5.19993 19.5208 6.07993V8.22989C19.5208 8.58989 19.7308 9.0999 19.9908 9.3599L21.5109 10.8799C22.1309 11.4999 22.1309 12.5199 21.5109 13.1399L19.9908 14.6599C19.7308 14.9199 19.5208 15.4299 19.5208 15.7899V17.9399C19.5208 18.8199 18.8009 19.5399 17.9209 19.5399H15.7708C15.4108 19.5399 14.9009 19.7499 14.6409 20.0099L13.1209 21.5299C12.5009 22.1499 11.4808 22.1499 10.8608 21.5299L9.34085 20.0099C9.08085 19.7499 8.57085 19.5399 8.21085 19.5399H6.06086C5.18086 19.5399 4.46085 18.8199 4.46085 17.9399V15.7899C4.46085 15.4199 4.25085 14.9099 3.99085 14.6599Z"
+                  fill="#292D32"
+                />
+                <path
+                  d="M15.0002 16C14.4402 16 13.9902 15.55 13.9902 15C13.9902 14.45 14.4402 14 14.9902 14C15.5402 14 15.9902 14.45 15.9902 15C15.9902 15.55 15.5502 16 15.0002 16Z"
+                  fill="#292D32"
+                />
+                <path
+                  d="M9.01001 10C8.45001 10 8 9.55 8 9C8 8.45 8.45 8 9 8C9.55 8 10 8.45 10 9C10 9.55 9.56001 10 9.01001 10Z"
+                  fill="#292D32"
+                />
+                <path
+                  d="M8.99945 15.75C8.80945 15.75 8.61945 15.68 8.46945 15.53C8.17945 15.24 8.17945 14.7599 8.46945 14.4699L14.4695 8.46994C14.7595 8.17994 15.2395 8.17994 15.5295 8.46994C15.8195 8.75994 15.8195 9.24 15.5295 9.53L9.52945 15.53C9.37945 15.68 9.18945 15.75 8.99945 15.75Z"
+                  fill="#292D32"
+                />
+              </svg>
+
+              <span>Склад</span>
+
+              <div class="header__sklad__dot">
+                <div class="header__sklad__dot__pulse"></div>
+              </div>
+            </a>
+
+            <a class="header__korzina" href="#">
+              <svg
+                width="40px"
+                height="40px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 5L19 12H7.37671M20 16H8L6 3H3M11.5 7L13.5 9M13.5 9L15.5 7M13.5 9V3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="header__wrapper__second__contacts">
+            <div class="header__wrapper__second__contacts__item">
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.3545 22.2323C15.3344 21.7262 11.1989 20.2993 7.44976 16.5502C3.70065 12.8011 2.2738 8.66559 1.76767 6.6455C1.47681 5.48459 2.00058 4.36434 2.88869 3.72997L5.21694 2.06693C6.57922 1.09388 8.47432 1.42407 9.42724 2.80051L10.893 4.91776C11.5152 5.8165 11.3006 7.0483 10.4111 7.68365L9.24234 8.51849C9.41923 9.1951 9.96939 10.5846 11.6924 12.3076C13.4154 14.0306 14.8049 14.5807 15.4815 14.7576L16.3163 13.5888C16.9517 12.6994 18.1835 12.4847 19.0822 13.1069L21.1995 14.5727C22.5759 15.5257 22.9061 17.4207 21.933 18.783L20.27 21.1113C19.6356 21.9994 18.5154 22.5232 17.3545 22.2323ZM8.86397 15.136C12.2734 18.5454 16.0358 19.8401 17.8405 20.2923C18.1043 20.3583 18.4232 20.2558 18.6425 19.9488L20.3056 17.6205C20.6299 17.1665 20.5199 16.5348 20.061 16.2171L17.9438 14.7513L17.0479 16.0056C16.6818 16.5182 16.0047 16.9202 15.2163 16.7501C14.2323 16.5378 12.4133 15.8569 10.2782 13.7218C8.1431 11.5867 7.46219 9.7677 7.24987 8.7837C7.07977 7.9953 7.48181 7.31821 7.99439 6.95208L9.24864 6.05618L7.78285 3.93893C7.46521 3.48011 6.83351 3.37005 6.37942 3.6944L4.05117 5.35744C3.74413 5.57675 3.64162 5.89565 3.70771 6.15943C4.15989 7.96418 5.45459 11.7266 8.86397 15.136Z"
+                  fill="#0F0F0F"
+                />
+              </svg>
+
+              <span>+7(495)324-1571</span>
+            </div>
+
+            <div class="header__wrapper__second__contacts__item">
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                  fill="#080341"
+                />
+              </svg>
+
+              <span>info@poagregat.ru</span>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
+
+    <main></main>
+
+    <footer>
+      <img
+        class="footer__logo"
+        src="https://poagregat.ru/wp-content/uploads/2024/04/logo-reo-agregat-1-—-kopiya.png"
+        alt="Логотип сайта"
+      />
+
+      <div class="footer__item">
+        <h6 class="footer__item__caption">Навигация</h6>
+
+        <a href="#" class="footer__item__link">Главная</a>
+
+        <a href="#" class="footer__item__link">О компании</a>
+
+        <a href="#" class="footer__item__link">Услуги</a>
+
+        <a href="#" class="footer__item__link">Заказ и получение товара</a>
+
+        <a href="#" class="footer__item__link">Новости</a>
+
+        <a href="#" class="footer__item__link">Контакты</a>
+      </div>
+
+      <div class="footer__item">
+        <h6 class="footer__item__caption">Клиентам</h6>
+
+        <a href="#" class="footer__item__link">Способы оплаты</a>
+
+        <a href="#" class="footer__item__link">Акции</a>
+
+        <a href="#" class="footer__item__link">Сервис и поддержка</a>
+
+        <a href="#" class="footer__item__link">Карта сайта</a>
+      </div>
+
+      <div class="footer__item">
+        <h6 class="footer__item__caption">Обратная связь</h6>
+
+        <div class="footer__item__contact">
+          <svg
+            version="1.1"
+            id="Uploaded to svgrepo.com"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="32px"
+            height="32px"
+            viewBox="0 0 32 32"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .blueprint_een {
+                fill: #111918;
+              }
+            </style>
+            <path
+              class="blueprint_een"
+              d="M26.146,0.745c-0.203-0.231-0.483-0.346-0.763-0.346c-0.283,0-0.566,0.119-0.765,0.358
+	l-5.904,7.084c-0.264,0.317-0.309,0.758-0.109,1.12c0.59,1.066,1.758,3.306,1.788,4.361c0.038,1.309-5.654,7.064-7.071,7.071
+	c-0.003,0-0.005,0-0.007,0c-1.058,0-3.287-1.18-4.352-1.78c-0.153-0.086-0.32-0.128-0.486-0.128c-0.229,0-0.456,0.079-0.64,0.233
+	L0.743,24.63c-0.457,0.381-0.489,1.083-0.055,1.49C3.961,29.187,7.279,31,11.201,31C15.444,31,31,15.444,31,11.201
+	C31,7.285,29.193,4.213,26.146,0.745z M25.396,2.948c0.412,0.498,0.771,0.973,1.105,1.438l-5.277,5.277
+	c-0.158-0.326-0.336-0.678-0.539-1.062L25.396,2.948z M8.592,20.693c0.382,0.206,0.733,0.385,1.058,0.544l-5.312,5.312
+	c-0.471-0.34-0.945-0.704-1.429-1.121L8.592,20.693z M21.277,21.277c-5.174,5.174-9.076,7.667-10.076,7.723
+	c-2.075,0-4.016-0.599-6.024-1.875l5.443-5.443c1.655,0.705,2.391,0.712,2.707,0.712c0.002,0,0.004,0,0.007,0
+	c0.492-0.003,1.988-0.01,5.828-3.983c3.282-3.396,3.248-4.578,3.232-5.145c-0.008-0.29-0.031-0.999-0.725-2.63l5.413-5.413
+	C28.431,7.312,29,9.152,29,11.193C28.944,12.202,26.451,16.104,21.277,21.277z"
+            />
+          </svg>
+
+          <span class="footer__item__contact__text">+7(495)324-1571</span>
+        </div>
+
+        <div class="footer__item__contact">
+          <svg
+            fill="#000000"
+            width="32px"
+            height="32px"
+            viewBox="0 0 24 24"
+            id="email"
+            data-name="Flat Line"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon flat-line"
+          >
+            <path
+              id="secondary"
+              d="M20.61,5.23l-8,6.28a1,1,0,0,1-1.24,0l-8-6.28A1,1,0,0,0,3,6V18a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V6A1,1,0,0,0,20.61,5.23Z"
+              style="fill: rgb(44, 169, 188); stroke-width: 2"
+            ></path>
+            <path
+              id="primary"
+              d="M20,19H4a1,1,0,0,1-1-1V6A1,1,0,0,1,4,5H20a1,1,0,0,1,1,1V18A1,1,0,0,1,20,19ZM20,5H4a1,1,0,0,0-.62.22l8,6.29a1,1,0,0,0,1.24,0l8-6.29A1,1,0,0,0,20,5Z"
+              style="
+                fill: none;
+                stroke: rgb(0, 0, 0);
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2;
+              "
+            ></path>
+          </svg>
+
+          <span class="footer__item__contact__text">info@poagregat.ru</span>
+        </div>
+      </div>
+    </footer>
 
     <script async src="./main.js"></script>
   </body>
