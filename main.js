@@ -59,23 +59,29 @@ for (let header__catalog__menu__item__withSubMenu of header__catalog__menu__item
   if (mobile_mediaQuery.matches) {
     header__catalog__menu__item__withSubMenu.addEventListener("click", (e) => {
       if (
-        !submenu.classList.contains(
-          "header__catalog__menu__item__submenu__active"
+        !e.target.classList.contains(
+          "header__catalog__menu__item__submenu__item__text"
         )
       ) {
-        submenu.classList.add("header__catalog__menu__item__submenu__active");
+        if (
+          !submenu.classList.contains(
+            "header__catalog__menu__item__submenu__active"
+          )
+        ) {
+          submenu.classList.add("header__catalog__menu__item__submenu__active");
 
-        header__catalog__menu__item__withSubMenu.classList.add(
-          "header__catalog__menu__item__active"
-        );
-      } else {
-        submenu.classList.remove(
-          "header__catalog__menu__item__submenu__active"
-        );
+          header__catalog__menu__item__withSubMenu.classList.add(
+            "header__catalog__menu__item__active"
+          );
+        } else {
+          submenu.classList.remove(
+            "header__catalog__menu__item__submenu__active"
+          );
 
-        header__catalog__menu__item__withSubMenu.classList.remove(
-          "header__catalog__menu__item__active"
-        );
+          header__catalog__menu__item__withSubMenu.classList.remove(
+            "header__catalog__menu__item__active"
+          );
+        }
       }
     });
   } else {

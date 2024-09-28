@@ -377,6 +377,10 @@ nav {
         &__text {
           color: #333;
           font-size: 12px;
+
+          @media (max-width: 600px) {
+            font-size: 17.6px;
+          }
         }
 
         &__svg {
@@ -388,7 +392,7 @@ nav {
             height: 25px;
             transform: rotate(90deg);
             margin-left: 0;
-            top: 10px;
+            top: 5px;
             position: relative;
           }
 
