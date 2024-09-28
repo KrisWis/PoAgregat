@@ -106,3 +106,21 @@ for (let header__catalog__menu__item__withSubMenu of header__catalog__menu__item
 }
 
 /* /Функционал открытия подменю в многоуровневом меню хедера/ */
+
+/* Открытие дропдауна при наведении на корзину */
+const header__korzina = document.getElementById("header__korzina");
+const header__korzina__dropdown = document.getElementById(
+  "header__korzina__dropdown"
+);
+
+header__korzina.addEventListener("mouseenter", () => {
+  header__korzina__dropdown.classList.add("header__korzina__dropdown__active");
+});
+
+header__korzina.addEventListener("mouseleave", () => {
+  header__korzina__dropdown.classList.remove(
+    "header__korzina__dropdown__active"
+  );
+});
+
+/* /Открытие дропдауна при наведении на корзину/ */
