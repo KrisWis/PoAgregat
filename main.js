@@ -113,7 +113,7 @@ const header__korzina__dropdown = document.getElementById(
   "header__korzina__dropdown"
 );
 
-header__korzina.addEventListener("mouseenter", () => {
+header__korzina.addEventListener("mouseenter", (e) => {
   header__korzina__dropdown.classList.add("header__korzina__dropdown__active");
 });
 

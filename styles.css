@@ -66,6 +66,10 @@ html {
   }
 }
 
+i {
+  font-family: "Font Awesome 5 Duotone Solid";
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
@@ -90,7 +94,7 @@ header {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 0 200px;
+  padding: 0 150px;
   position: relative;
 }
 @media (max-width: 1400px) {
@@ -135,8 +139,6 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
 }
 @media (max-width: 900px) {
   .header__wrapper {
@@ -176,7 +178,11 @@ nav {
   display: flex;
   gap: 20px;
   align-items: center;
-  flex-direction: row-reverse;
+}
+@media (max-width: 900px) {
+  .header__wrapper__second__wrapper {
+    flex-direction: row-reverse;
+  }
 }
 .header__wrapper__second__contacts {
   display: flex;
@@ -186,6 +192,7 @@ nav {
   color: #3b3d40;
   font-size: 18px;
   font-weight: 600;
+  margin-right: 100px;
 }
 .header__wrapper__second__contacts__item {
   display: flex;
@@ -267,7 +274,6 @@ nav {
   top: 100%;
   background-color: #fff;
   pointer-events: all;
-  gap: 20px;
   z-index: 1;
   width: 100%;
 }
@@ -294,12 +300,28 @@ nav {
   pointer-events: none;
 }
 .header__catalog__menu__item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: space-between;
   position: relative;
-  cursor: pointer;
+  padding: 20px 0;
+  border-bottom: 0.5px solid #3b3d40;
+}
+@media (max-width: 900px) {
+  .header__catalog__menu__item {
+    border: none;
+  }
+}
+@media (min-width: 900px) {
+  .header__catalog__menu__item div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    position: relative;
+  }
 }
 .header__catalog__menu__item * {
   transition: 0.3s linear all;
@@ -318,6 +340,7 @@ nav {
 .header__catalog__menu__item__img {
   width: 20px;
   height: 20px;
+  margin-right: 10px;
 }
 @media (max-width: 900px) {
   .header__catalog__menu__item__img {
@@ -354,7 +377,7 @@ nav {
   border: 1px solid #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   position: absolute;
-  right: -150%;
+  right: -195%;
   top: 0;
   transition: 0.3s linear all;
   opacity: 0;
@@ -571,6 +594,7 @@ nav {
   width: 20rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   background: #fff;
+  pointer-events: none;
 }
 .header__korzina__dropdown__text {
   font-size: 1rem;
@@ -588,7 +612,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  padding: 50px 200px;
+  padding: 50px 150px;
   background-color: #eee;
   height: -moz-fit-content;
   height: fit-content;
