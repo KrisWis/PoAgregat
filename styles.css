@@ -60,10 +60,16 @@ html {
   overflow-x: hidden;
   margin-top: 10px;
 }
+@media (max-width: 900px) {
+  html {
+    margin-top: 0;
+  }
+}
 
 body {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
 }
 
 * {
@@ -102,8 +108,7 @@ header {
     position: fixed;
     z-index: 1;
     background-color: #fff;
-    padding: 0;
-    padding-bottom: 10px;
+    padding: 10px 0;
   }
 }
 
@@ -253,6 +258,7 @@ nav {
   pointer-events: all;
   gap: 20px;
   z-index: 1;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .header__catalog__menu {
@@ -261,9 +267,14 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    top: 10vh;
+    top: 20vh;
     padding: 10px;
     overflow-y: auto;
+  }
+}
+@media (max-width: 600px) {
+  .header__catalog__menu {
+    top: 10vh;
   }
 }
 .header__catalog__menu__disactive {
@@ -332,7 +343,7 @@ nav {
   border: 1px solid #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   position: absolute;
-  right: -210%;
+  right: -150%;
   top: 0;
   transition: 0.3s linear all;
   opacity: 0;
@@ -484,7 +495,9 @@ nav {
 }
 @media (max-width: 900px) {
   .header__sklad {
-    width: 180px;
+    width: 120px;
+    height: 30px;
+    font-size: 8px;
   }
 }
 .header__sklad__dot {
