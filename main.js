@@ -56,29 +56,53 @@ for (let header__catalog__menu__item__withSubMenu of header__catalog__menu__item
     ".header__catalog__menu__item__submenu"
   );
 
-  header__catalog__menu__item__withSubMenu.addEventListener(
-    "mouseenter",
-    (e) => {
-      if (header__catalog__menu__item__active != e.target) {
-        if (header__catalog__menu__item__active) {
-          header__catalog__menu__item__active
-            .querySelector(".header__catalog__menu__item__submenu")
-            .classList.remove("header__catalog__menu__item__submenu__active");
-
-          header__catalog__menu__item__active.classList.remove(
-            "header__catalog__menu__item__active"
-          );
-        }
-        header__catalog__menu__item__active = e.target;
-
+  if (mobile_mediaQuery.matches) {
+    header__catalog__menu__item__withSubMenu.addEventListener("click", (e) => {
+      if (
+        !submenu.classList.contains(
+          "header__catalog__menu__item__submenu__active"
+        )
+      ) {
         submenu.classList.add("header__catalog__menu__item__submenu__active");
 
         header__catalog__menu__item__withSubMenu.classList.add(
           "header__catalog__menu__item__active"
         );
+      } else {
+        submenu.classList.remove(
+          "header__catalog__menu__item__submenu__active"
+        );
+
+        header__catalog__menu__item__withSubMenu.classList.remove(
+          "header__catalog__menu__item__active"
+        );
       }
-    }
-  );
+    });
+  } else {
+    header__catalog__menu__item__withSubMenu.addEventListener(
+      "mouseenter",
+      (e) => {
+        if (header__catalog__menu__item__active != e.target) {
+          if (header__catalog__menu__item__active) {
+            header__catalog__menu__item__active
+              .querySelector(".header__catalog__menu__item__submenu")
+              .classList.remove("header__catalog__menu__item__submenu__active");
+
+            header__catalog__menu__item__active.classList.remove(
+              "header__catalog__menu__item__active"
+            );
+          }
+          header__catalog__menu__item__active = e.target;
+
+          submenu.classList.add("header__catalog__menu__item__submenu__active");
+
+          header__catalog__menu__item__withSubMenu.classList.add(
+            "header__catalog__menu__item__active"
+          );
+        }
+      }
+    );
+  }
 }
 
 /* /Функционал открытия подменю в многоуровневом меню хедера/ */
