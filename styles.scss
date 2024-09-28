@@ -724,8 +724,8 @@ nav {
   background-color: #337ab7;
   border-radius: 20px;
   position: absolute;
-  transition-duration: 0.25s;
-  transition-delay: 0.25s;
+  transition-duration: 0.15s;
+  transition-delay: 0.15s;
 }
 #header__catalog__button__adaptive span:before {
   left: 0;
@@ -736,8 +736,8 @@ nav {
   background-color: #337ab7;
   content: "";
   border-radius: 20px;
-  transition-duration: 0.25s;
-  transition: transform 0.25s, top 0.25s 0.25s;
+  transition-duration: 0.15s;
+  transition: transform 0.15s, top 0.15s 0.15s;
 }
 #header__catalog__button__adaptive span:after {
   left: 0;
@@ -748,21 +748,21 @@ nav {
   background-color: #337ab7;
   content: "";
   border-radius: 20px;
-  transition-duration: 0.25s;
-  transition: transform 0.25s, top 0.25s 0.25s;
+  transition-duration: 0.15s;
+  transition: transform 0.15s, top 0.15s 0.15s;
 }
 #header__catalog__button__adaptive.open span {
   transition-duration: 0.1s;
-  transition-delay: 0.25s;
+  transition-delay: 0.15s;
   background: transparent;
 }
 #header__catalog__button__adaptive.open span:before {
-  transition: top 0.25s, transform 0.25s 0.25s;
+  transition: top 0.15s, transform 0.15s 0.15s;
   top: 0px;
   transform: rotateZ(-45deg);
 }
 #header__catalog__button__adaptive.open span:after {
-  transition: top 0.4s, transform 0.25s 0.25s;
+  transition: top 0.4s, transform 0.15s 0.15s;
   top: 0px;
   transform: rotateZ(45deg);
 }
