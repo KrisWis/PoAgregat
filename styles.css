@@ -206,7 +206,7 @@ nav {
   transition: 0.3s linear all;
   cursor: pointer;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .header__wrapper__second__contacts__item__call {
     display: none;
   }
